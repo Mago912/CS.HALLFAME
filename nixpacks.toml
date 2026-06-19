@@ -1,5 +1,7 @@
 [phases.build]
 cmds = [
+  "npm install",
+  "npm run build",
   "composer install --no-dev --optimize-autoloader"
 ]
 
