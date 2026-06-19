@@ -1,9 +1,6 @@
 [phases.build]
 cmds = [
-  "composer install --no-dev --optimize-autoloader",
-  "php artisan config:clear",
-  "php artisan route:clear",
-  "php artisan view:clear"
+  "composer install --no-dev --optimize-autoloader"
 ]
 
 [phases.deploy]
@@ -12,4 +9,4 @@ cmds = [
 ]
 
 [start]
-cmd = "frankenphp run --config /etc/caddy/Caddyfile"
+cmd = "php -S 0.0.0.0:$PORT -t public"
