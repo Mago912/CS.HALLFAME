@@ -13,7 +13,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-
+    background-color: #010409;
+}
 <nav class="navbar navbar-expand-lg" style="background-color: #1b1f24;">
     <div class="container">
         <a class="navbar-brand text-light fw-bold" href="/">
