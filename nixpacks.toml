@@ -1,8 +1,18 @@
+[variables]
+APP_ENV = "production"
+
+[phases.setup]
+nixPkgs = ["php83", "php83Extensions.pdo", "php83Extensions.pdo_mysql", "php83Extensions.mbstring", "php83Extensions.tokenizer", "php83Extensions.xml", "php83Extensions.ctype", "php83Extensions.fileinfo", "php83Extensions.bcmath", "composer"]
+
 [phases.build]
 cmds = [
-  "composer install --no-dev --optimize-autoloader",
-  "php artisan storage:link",
-  "php artisan migrate --force"
+  "composer install --no-dev --optimize-autoloader"
+]
+
+[phases.deploy]
+cmds = [
+  "php artisan migrate --force",
+  "php artisan storage:link"
 ]
 
 [start]
